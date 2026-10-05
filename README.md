@@ -9,7 +9,7 @@ The data is in california_housing.csv. Each row describes one district in Califo
 
 Target: median_house_value
 Features used: longitude, latitude, housing_median_age, total_rooms, total_bedrooms, population, households, median_income
-Not used: ocean_proximity (a text column, dropped for now; see Future Improvements)
+Not used: ocean_proximity.
 
 #How It Works
 1. Load and clean: Read the CSV and drop rows with missing (NaN) values.
@@ -18,6 +18,9 @@ Not used: ocean_proximity (a text column, dropped for now; see Future Improvemen
 4. Train: Fit a LinearRegression model on the scaled training data.
 5. Evaluate: Predict on the test set and measure performance.
 6. Interpret: Print each feature's coefficient to see which features influence the price most. Because the features are standardized, the coefficients can be compared with each other.
+
+#Results
+On evaluating, my RMSE was around 60K. my R2 score was 6.8.
 
 #Limitations
 1. Rows with missing values were removed rather than filled in.
